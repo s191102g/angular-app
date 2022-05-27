@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
   outApp(){
-    window.location.href = 'http://localhost:4200/'
+    window.location.href = 'https://angular-app-bysang.herokuapp.com/'
     let num = 0
     this.outapp.emit(num)
   }
