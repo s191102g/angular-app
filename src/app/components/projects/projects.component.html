@@ -1,0 +1,49 @@
+<div class="wr" >
+ 
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Danh Sách Dự Án</li>
+    </ol>
+  </nav>
+  
+  <main>
+    <div class="add">
+      <button type="button" class="btn btn-primary" routerLink="/them-du-an" >Thêm Mới</button>
+    </div>
+    <div class="list">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Ngày Bắt Đầu</th>
+            <th scope="col">Team Size</th>
+            <th scope="col">Chi Phí</th>
+            <th scope="col">Chức Năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of myPrj" >
+            <th scope="row">{{p.id}}</th>
+            <td>
+              <div class="ten">
+                {{p.prj_name}}
+              </div>
+            </td>
+            <td>{{setDate(p.prj_date)}}</td>
+            <td>{{p.prj_teamsize}}</td>
+            <td>{{p.prj_expense.toLocaleString()}}</td>
+            <td class="action">
+              <button type="button" class="btn btn-success" [routerLink]="['/sua-du-an/',p.id]" >Sửa</button>
+              <button type="button" class="btn btn-danger" (click)="onDelete(p.id)" >Xóa</button>
+            </td>
+          </tr>
+         
+         
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>

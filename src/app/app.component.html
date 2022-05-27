@@ -1,0 +1,27 @@
+
+<div class="ctn" >
+  <div *ngIf="check===0" >
+    <app-login
+    (accout)="getUser($event)"
+    ></app-login>
+  </div>
+
+
+  <div *ngIf="check===1" >
+    <app-header
+    [role]="1"
+    (outapp)="Out($event)"
+    ></app-header>
+    <router-outlet></router-outlet> 
+  </div>
+
+
+  <div *ngIf="check===2" >
+    <app-header
+    [role]="2"
+    (outapp)="Out($event)"
+    ></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

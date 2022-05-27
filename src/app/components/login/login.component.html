@@ -1,0 +1,20 @@
+<div class="wr">
+  <h2>ĐĂNG NHẬP</h2>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Tên đăng nhập</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="un" [ngModelOptions]="{standalone: true}"  >
+     
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Mật khẩu</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="pw"  [ngModelOptions]="{standalone: true}" >
+     
+    </div>
+    <div class="form-group form-check">
+      <small id="emailHelp" class="form-text text-muted">{{checkun}}</small>
+    </div>
+    <button type="submit" (click)="check()" class="btn btn-primary">Submit</button>
+  </form>
+  
+</div>

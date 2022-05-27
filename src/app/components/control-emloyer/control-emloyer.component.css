@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+
+}
+
+.wr{
+    width: 100%;
+    height: auto;
+    padding: 10px 30px;
+}
+
+main{
+    width: 100%;
+    height: 550px;
+    background-color: #f2f4f2;
+    display: flex;
+    padding: 10px 0px;
+}
+
+.box-left{
+    width: 25%;
+    height: 100%;
+
+}
+.role{
+    width: 100%;
+    height: 30px;
+    padding: 0px 20px;
+    text-align: center;
+}
+.rolebox{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    color: white;
+}
+
+.about{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+}
+.img{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+}
+.img svg{
+    width: 59%;
+    height: 100%;
+}
+.about h3{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.job{
+    width: 100%;
+    padding: 10px;
+}
+.job h4{
+    text-align: center;
+}
+
+
+.box-main{
+    width: 50%;
+    height: 100%;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.box-right{
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+   
+}
+
+.emloyer{
+    width: 100%;
+    height: 450px;
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 0px 0px 5px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+
+.bm-top{
+    width: 100%;
+    height: 40%;
+}
+
+.slnv{
+   padding-left: 20px;
+}

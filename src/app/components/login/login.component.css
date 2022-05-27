@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.wr{
+
+    width: 100%;
+    height: auto;
+    padding: 70px 350px;
+}
+h2{
+    text-align: center;
+}
+form{
+    border: 1px solid rgb(102, 93, 93);
+    padding: 30px;
+}

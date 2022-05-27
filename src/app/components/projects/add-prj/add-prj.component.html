@@ -1,0 +1,62 @@
+<div class="wr">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Thêm Dự Án Mới</li>
+    </ol>
+  </nav>
+
+  <main>
+      <div class="box">
+        <div class="form-gr">
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <input type="text" readonly class="form-control-plaintext"  value="Tên dự án">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="inputPassword2" [(ngModel)]="prj_name" name="prj_name">
+            </div>
+            
+          </form>
+        </div>
+
+        <div class="form-gr">
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <input type="text" readonly class="form-control-plaintext"  value="Ngày bắt đầu">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="date" class="form-control" id="inputPassword2" [(ngModel)]="prj_date" name="prj_date" >
+            </div>
+            
+          </form>
+        </div>
+
+        <div class="form-gr">
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <input type="text" readonly class="form-control-plaintext"  value="Số lượng nhân viên">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="number" class="form-control" id="inputPassword2" [(ngModel)]="prj_teamsize" name="prj_teamsize" >
+            </div>
+            
+          </form>
+        </div>
+
+        <div class="form-gr">
+          <form class="form-inline">
+            <div class="form-group mb-2">
+              <input type="text" readonly class="form-control-plaintext"  value="Chi phí thực hiện">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="number" class="form-control" id="inputPassword2" [(ngModel)]="prj_expense" name="prj_expense">
+            </div>
+            
+          </form>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="onAdd()"  routerLink="/danh-sach-du-an" >Thêm mới</button>
+      </div>
+  </main>
+</div>

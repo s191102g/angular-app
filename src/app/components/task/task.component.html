@@ -1,0 +1,48 @@
+<div class="wr" >
+ 
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Danh Sách Task</li>
+    </ol>
+  </nav>
+  
+  <main>
+    <div class="add">
+      <button type="button" class="btn btn-primary" routerLink="/them-task" >Thêm Mới</button>
+    </div>
+    <div class="list">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Mô Tả</th>
+            <th scope="col">Dự Án</th>
+            <th scope="col">Chức Năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of myTask" >
+            <th scope="row">{{t.id}}</th>
+            <td>
+              <div class="ten">{{t.task_name}}</div>
+            </td>
+            <td>
+              <div class="mota">
+                {{t.task_des}}
+              </div>
+            </td>
+            <td>{{setNamePrj(t.id_prj)}}</td>
+            <td class="action">
+              <button type="button" class="btn btn-success" [routerLink]="['/sua-task/',t.id]" >Sửa</button>
+              <button type="button" class="btn btn-danger" (click)="onDelete(t.id)" >Xóa</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
