@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyServiceService } from 'src/app/my-service.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-prj',
   templateUrl: './add-prj.component.html',
@@ -13,7 +14,8 @@ export class AddPrjComponent implements OnInit {
   prj_expense:number=0
   constructor(
     public http:HttpClient,
-    public service:MyServiceService
+    public service:MyServiceService,
+    public router:Router
   ) { }
 
   ngOnInit() {
@@ -30,7 +32,7 @@ export class AddPrjComponent implements OnInit {
      
    this.service.addPrj(endpoin,formData).subscribe(data=>{
      console.log(data);
-    
+     this.router.navigate(['/danh-sach-du-an'])
    })
      
   }

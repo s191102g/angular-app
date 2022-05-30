@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MyServiceService } from 'src/app/my-service.service';
 import { IProject } from 'src/app/entities/myInterface';
+
 @Component({
   selector: 'app-fix-prj',
   templateUrl: './fix-prj.component.html',
@@ -21,7 +22,8 @@ export class FixPrjComponent implements OnInit {
   check:string=''
   constructor(
     public activateroute: ActivatedRoute,
-    public service:MyServiceService
+    public service:MyServiceService,
+    public router:Router
   ) { }
 
   ngOnInit() {
@@ -52,7 +54,7 @@ export class FixPrjComponent implements OnInit {
         let endpoin = `project/${id}`;
         this.service.fixPrj(endpoin,this.prj).subscribe(data=>{
           console.log(data);
-         
+          this.router.navigate(['/danh-sach-du-an'])
         })
       }
      

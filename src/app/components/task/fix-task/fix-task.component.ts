@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MyServiceService } from 'src/app/my-service.service';
 import { IProject,ITask } from 'src/app/entities/myInterface';
 @Component({
@@ -21,7 +21,8 @@ export class FixTaskComponent implements OnInit {
   pp:string=''
   constructor(
     public service:MyServiceService,
-    public activateroute:ActivatedRoute
+    public activateroute:ActivatedRoute,
+    public router:Router
   ) { }
 
   ngOnInit() {
@@ -53,6 +54,7 @@ export class FixTaskComponent implements OnInit {
        let endpoin = `tasks/${id}`
        this.service.fixTask(endpoin,this.task).subscribe(data=>{
         console.log(data);
+        this.router.navigate(['/danh-sach-task'])
       })
   }
 

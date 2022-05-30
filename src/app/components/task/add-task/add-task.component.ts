@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyServiceService } from 'src/app/my-service.service';
 import { IProject,ITask } from 'src/app/entities/myInterface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
@@ -14,7 +15,8 @@ export class AddTaskComponent implements OnInit {
 
   pp:string=''
   constructor(
-    public service:MyServiceService
+    public service:MyServiceService,
+    public router:Router
   ) { }
 
   ngOnInit() {
@@ -26,7 +28,7 @@ export class AddTaskComponent implements OnInit {
     let endpoin = 'project'
     this.service.getAllPrj(endpoin).subscribe(data=>{
       this.prj = data
-
+     
     })
   }
 
@@ -47,7 +49,7 @@ export class AddTaskComponent implements OnInit {
   
      this.service.addTask(endpoin,formData).subscribe(data=>{
        console.log(data);
-      
+      this.router.navigate(['/danh-sach-task'])
      })
     }
 
